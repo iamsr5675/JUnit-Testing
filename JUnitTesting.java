@@ -3,27 +3,20 @@ package co.bridgelabz.JUnitTesting;
 import java.util.Scanner;
 public class JUnitTesting 
 {
-	public static void main(String[] args) {
-		double Celsius, Fahrenheit, c, f;
-		int n;
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter Celsius:");
-		c=sc.nextDouble();
-		System.out.println("Enter Fahrenheit:");
-		f=sc.nextDouble();
-		System.out.println("Press 1 for Celsius to Fahrenheit:");
-		System.out.println("Press 2 for Fahrenheit to Celsius:");
-		n=sc.nextInt();
-		switch(n)
-		{
-		case 1:
-			Celsius = (c * 9/5) + 32;
-			System.out.println(Celsius);
-			break;
-		case 2:
-			Fahrenheit = (f - 32) * 5 / 9;
-			System.out.println(Fahrenheit);
-			break;
-		}
-		}
-		}
+	public static void main(String[] args) 
+	{
+		double p, r, payement;
+		int t;
+		Scanner sc = new Scanner(System.in); 
+	   	System.out.println("Enter Principal: ");
+	   	p = sc.nextDouble(); 
+	   	System.out.println("Enter Rate of Interest: ");
+	   	r = sc.nextDouble(); 
+	   	r = (r / 100) / 12; 
+	   	System.out.println("Enter Time period in years: ");
+	   	t = sc.nextInt();
+	   	t = t * 12; 
+	   	payement= (p * r) / (1 - Math.pow(1 + r, -t));
+	   	System.out.println("Payment: " + payement);   
+	 }
+	}
